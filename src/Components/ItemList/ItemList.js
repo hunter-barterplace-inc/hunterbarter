@@ -67,7 +67,7 @@ class AddItem extends Component {
             description: item.description,
             username: item.username,
             date: date,
-            image: "https://dkdno63yk5s4u.cloudfront.net/" + item.picture,
+            image: "dkdno63yk5s4u.cloudfront.net/" + item.picture,
             category: item.category,
             condition: item.condition,
             id: item._id.$oid
