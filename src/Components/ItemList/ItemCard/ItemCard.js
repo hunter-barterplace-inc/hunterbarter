@@ -214,7 +214,7 @@ class ItemCard extends React.Component {
           />
           <CardMedia
             className={classes.media}
-            image={"http://" + this.props.item.image}
+            image={"https://" + this.props.item.image}
             title={this.props.item.name}
           />
 
