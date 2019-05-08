@@ -277,8 +277,8 @@ class ItemCard extends React.Component {
         <Modal open={this.state.contactModal} onClose={this.toggleContactModel}>
           <DialogContent>
             <div className="contactModal">
-              <h1>{this.state.userEmail}</h1>
-              <h1>{this.state.userPhone}</h1>
+              <p>{this.state.userEmail}</p>
+              <h2>{this.state.userPhone}</h2>
             </div>
           </DialogContent>
         </Modal>

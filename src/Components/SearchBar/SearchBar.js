@@ -18,6 +18,7 @@ class SeachBar extends Component {
   };
 
   onSubmitSearch = () => {
+    console.log("searching...", this.state.item);
     if (this.state.item.length > 0) {
       this.props.search(this.state.item);
     } else alert("Enter something in searchbar");
