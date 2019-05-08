@@ -18,22 +18,9 @@ class SeachBar extends Component {
   };
 
   onSubmitSearch = () => {
-    console.log("searching...", this.state.item);
-    this.props.search(this.state.item);
-
-    const auth = sessionStorage.getItem("barterAuth");
-    fetch(
-      `https://hunterbarter.herokuapp.com/search?query=${this.state.item}`,
-      {
-        credentials: "same-origin",
-        method: "get",
-        headers: { "Content-Type": "application/json", Authorization: auth }
-      }
-    )
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-      });
+    if (this.state.item.length > 0) {
+      this.props.search(this.state.item);
+    } else alert("Enter something in searchbar");
   };
 
   render() {
