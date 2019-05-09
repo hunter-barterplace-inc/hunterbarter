@@ -24,6 +24,12 @@ class SeachBar extends Component {
     } else alert("Enter something in searchbar");
   };
 
+  handleKeyPress = event => {
+    if(event.key === 'Enter') {
+      this.onSubmitSearch();
+    }
+  };
+
   render() {
     return (
       <div className="SearchBarContainer">
@@ -37,6 +43,7 @@ class SeachBar extends Component {
           margin="normal"
           variant="outlined"
           onChange={this.onNameChange}
+          onKeyPress = {this.handleKeyPress}
         />
         <Button
           variant="contained"
